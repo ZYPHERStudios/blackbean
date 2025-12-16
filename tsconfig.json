@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src/ts",
+    "outDir": "./dist",
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "typeRoots": ["./src/ts/types"]
+  },
+  "include": ["./src/ts/**/*"]
+}

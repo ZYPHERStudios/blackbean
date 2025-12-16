@@ -1,0 +1,9 @@
+/node_modules/
+/package-lock.json
+/pnpm-lock.yaml
+/*.traineddata
+/dist/
+/debug/
+/store/
+**/.DS_Store
+.env.local
