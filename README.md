@@ -37,12 +37,12 @@ browser automation and intelligent answer selection.
 ```sh
 # package
 $ npm install -g blackbean
-$ blackbean --auth-method google --email your.email@example.com --password password1234! --length 15 --accuracy 90
+$ blackbean --auth-method membean --email your.email@example.com --password password1234! --length 15 --accuracy 90
 
 # source
 $ git clone https://github.com/ZYPHERStudios/blackbean.git
 $ npm install
-$ npm run start -- --auth-method google --email your.email@example.com --password password1234! --length 15 --accuracy 90
+$ npm run start -- --auth-method membean --email your.email@example.com --password password1234! --length 15 --accuracy 90
 ```
 
 **GUI:**
@@ -52,7 +52,7 @@ $ npm run start -- --auth-method google --email your.email@example.com --passwor
 
 | Name | Enviroment | Default | Type | Required |
 | :-: | :-: | :-: | :-: | :-: |
-| auth-method | AUTH_METHOD | google | string | yes |
+| auth-method | AUTH_METHOD | membean | string | yes |
 | email | AUTH_EMAIL | | string | yes |
 | password | AUTH_PASSWD | | string | yes |
 | length | SESSION_LENGTH | 15 | string | no |

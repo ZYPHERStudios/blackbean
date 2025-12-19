@@ -4,7 +4,7 @@ const CONFIG_DEFAULT = {
     hide_log: false,
     headless: false,
     recover_crash: false,
-    session_length: 15,
+    session_length: 15
   },
   api: {
     base_url: 'https://api.openai.com/v1',
@@ -12,7 +12,7 @@ const CONFIG_DEFAULT = {
     model: 'gpt-5.2'
   },
   membean_auth: {
-    auth_method: 'GOOGLE',
+    auth_method: 'MEMBEAN',
     email: 'USER_EMAIL',
     password: 'USER_PASSWORD'
   },

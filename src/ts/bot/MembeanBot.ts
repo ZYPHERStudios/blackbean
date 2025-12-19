@@ -103,6 +103,24 @@ export class MembeanBot {
       await this.page.goto(url, { waitUntil: 'networkidle2' });
       let el: ElementHandle<Element> | null;
       switch (method) {
+        case 'membean': {
+          el = await this.page.waitForSelector('input#username');
+          await el?.focus();
+          this.logger.debug('Typing email...');
+          await el?.type(this.config.get('membean_auth.email'));
+          this.logger.debug('Typed email.');
+          await this.debugScreenshot('login_email');
+          el = await this.page.waitForSelector('input#password[type=password]');
+          await el?.focus();
+          this.logger.debug('Typing password...');
+          await el?.type(this.config.get('membean_auth.password'));
+          this.logger.debug('Typed password.');
+          await this.debugScreenshot('login_password');
+          el = await this.page.waitForSelector('.btn-call-to-action');
+          await el?.click();
+          await this.page.waitForNetworkIdle();
+          break;
+        }
         case 'google': {
           el = await this.page.waitForSelector('input[type=email]');
           await el?.focus();

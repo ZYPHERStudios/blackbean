@@ -77,17 +77,17 @@ function getString (cli: string | undefined, env: string | undefined): string | 
       session_length: getString(ARGV.length, SESSION_LENGTH_ENV)
     },
     api: {
-      base_url: getString(ARGV["api-base"], AI_API_BASE_ENV),
-      api_key: getString(ARGV["api-key"], AI_API_KEY_ENV),
-      model: getString(ARGV["api-model"], AI_API_MODEL_ENV)
+      base_url: getString(ARGV['api-base'], AI_API_BASE_ENV),
+      api_key: getString(ARGV['api-key'], AI_API_KEY_ENV),
+      model: getString(ARGV['api-model'], AI_API_MODEL_ENV)
     },
     membean_auth: {
-      auth_method: getString(ARGV["auth-method"], AUTH_METHOD_ENV),
+      auth_method: getString(ARGV['auth-method'], AUTH_METHOD_ENV),
       email: getString(ARGV.email, AUTH_EMAIL_ENV),
       password: getString(ARGV.password, AUTH_PASSWD_ENV)
     },
     answers: {
-      accuracy: getString(ARGV.accuracy, ANSWER_ACCURACY_ENV),
+      accuracy: getString(ARGV.accuracy, ANSWER_ACCURACY_ENV)
     }
   });
 
