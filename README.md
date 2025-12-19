@@ -23,7 +23,7 @@ browser automation and intelligent answer selection.
 - [x] Fully configurable behavior and accuracy
 - [x] Command-line driven interface
 - [x] Designed to minimize detection
-- [ ] Multiple authentication types
+- [x] Multiple authentication types
 - [ ] GUI for session management
 
 ## Requirements
