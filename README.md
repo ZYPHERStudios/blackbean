@@ -35,14 +35,8 @@ browser automation and intelligent answer selection.
 
 **CLI:**
 ```sh
-# package
-$ npm install -g blackbean
+$ npm install -g ZYPHERStudios/blackbean
 $ blackbean --auth-method membean --email your.email@example.com --password password1234! --length 15 --accuracy 90
-
-# source
-$ git clone https://github.com/ZYPHERStudios/blackbean.git
-$ npm install
-$ npm run start -- --auth-method membean --email your.email@example.com --password password1234! --length 15 --accuracy 90
 ```
 
 **GUI:**
