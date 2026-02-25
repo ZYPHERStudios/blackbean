@@ -49,7 +49,7 @@ $ blackbean --auth-method membean --email your.email@example.com --password pass
 | auth-method | AUTH_METHOD | membean | string | yes |
 | email | AUTH_EMAIL | | string | yes |
 | password | AUTH_PASSWD | | string | yes |
-| length | SESSION_LENGTH | 15 | string | no |
+| length | SESSION_LENGTH | 15 | number | no |
 | api-base | AI_API_BASE | https://api.openai.com/v1 | string | no |
 | api-key | AI_API_KEY | | string | yes |
 | debug | BB_DEBUG | false | boolean | no |
