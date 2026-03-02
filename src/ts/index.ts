@@ -13,6 +13,8 @@ const AUTH_PASSWD_ENV: string | undefined = process.env.AUTH_PASSWD;
 const SESSION_LENGTH_ENV: string | undefined = process.env.SESSION_LENGTH;
 
 const ANSWER_ACCURACY_ENV: string | undefined = process.env.ANSWER_ACCURACY;
+const ANSWER_DELAY_MIN_ENV: string | undefined = process.env.ANSWER_DELAY_MIN;
+const ANSWER_DELAY_MAX_ENV: string | undefined = process.env.ANSWER_DELAY_MAX;
 
 const AI_API_BASE_ENV: string | undefined = process.env.AI_API_BASE;
 const AI_API_KEY_ENV: string | undefined = process.env.AI_API_KEY;
@@ -87,7 +89,9 @@ function getString (cli: string | undefined, env: string | undefined): string | 
       password: getString(ARGV.password, AUTH_PASSWD_ENV)
     },
     answers: {
-      accuracy: getString(ARGV.accuracy, ANSWER_ACCURACY_ENV)
+      accuracy: getString(ARGV.accuracy, ANSWER_ACCURACY_ENV),
+      delay_min: getString(ARGV['delay-min'], ANSWER_DELAY_MIN_ENV),
+      delay_max: getString(ARGV['delay-max'], ANSWER_DELAY_MAX_ENV)
     }
   });
 

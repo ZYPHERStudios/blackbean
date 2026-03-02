@@ -29,15 +29,15 @@ const captioner = await pipeline('image-to-text', 'Xenova/vit-gpt2-image-caption
         total.set(p.file, p.total ?? 0);
         loaded.set(p.file, p.loaded ?? 0);
 
-        const T = [...total.values()].reduce((a, x) => a + x, 0);
-        const L = [...loaded.values()].reduce((a, x) => a + x, 0);
+        const t = [...total.values()].reduce((a, x) => a + x, 0);
+        const l = [...loaded.values()].reduce((a, x) => a + x, 0);
 
-        if (!bar && T > 0) {
+        if (!bar && t > 0) {
           bar = new cliProgress.SingleBar({ format: 'Downloading [{bar}] {percentage}% | {value}/{total} bytes | {file}' }, cliProgress.Presets.shades_classic);
-          bar.start(T, L, { file: p.file });
+          bar.start(t, l, { file: p.file });
         } else if (bar) {
-          bar.setTotal(T);
-          bar.update(L, { file: p.file });
+          bar.setTotal(t);
+          bar.update(l, { file: p.file });
         }
         return;
       }

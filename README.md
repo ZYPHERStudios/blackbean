@@ -51,6 +51,8 @@ $ blackbean --auth-method membean --email your.email@example.com --password pass
 | password | AUTH_PASSWD | | string | yes |
 | length | SESSION_LENGTH | 15 | number | no |
 | accuracy | ANSWER_ACCURACY | 90 | number | no |
+| delay-min | ANSWER_DELAY_MIN | 3000 | number | no |
+| delay-max | ANSWER_DELAY_MAX | 7000 | number | no |
 | api-base | AI_API_BASE | https://api.openai.com/v1 | string | no |
 | api-key | AI_API_KEY | | string | yes |
 | debug | BB_DEBUG | false | boolean | no |
