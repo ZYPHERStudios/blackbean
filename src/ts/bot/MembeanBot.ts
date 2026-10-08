@@ -122,7 +122,7 @@ export class MembeanBot {
           break;
         }
         case 'google': {
-          el = await this.page.waitForSelector('input[type=email]');
+          el = await this.page.waitForSelector('input[aria-label^="email" i]');
           await el?.focus();
           this.logger.debug('Typing email...');
           await el?.type(this.config.get('membean_auth.email'));

@@ -34,7 +34,7 @@ export class MultipleChoiceQuestion extends MembeanQuestion {
       }
       response = await this.sendAPI(s, Prompts.MULTIPLE_CHOICE);
       answer = Number(response.choices[0].message.content);
-      this.logger.debug(`API answer: ${answer}`);
+      this.apiAnswer(answer);
     }
     await BotUtils.sleep(this.getRandomTime());
     if (correct === null) {

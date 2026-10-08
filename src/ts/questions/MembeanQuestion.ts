@@ -36,6 +36,10 @@ export abstract class MembeanQuestion {
     });
   }
 
+  protected apiAnswer (s: string | number): void {
+    this.logger.debug(`API answer: ${s}`);
+  }
+
   public abstract answer (): Promise<void>;
 }
 

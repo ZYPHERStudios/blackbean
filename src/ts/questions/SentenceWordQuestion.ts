@@ -23,7 +23,7 @@ export class SentenceWordQuestion extends TypingQuestion {
     const response: ChatCompletion = await this.sendAPI(s, Prompts.SENTENCE_WORD);
     const time: number = this.getRandomTime();
     const answer: string = (response.choices[0].message.content || '-1').trim();
-    this.logger.debug(`API answer: ${answer}`);
+    this.apiAnswer(answer);
     await BotUtils.sleep(time);
     if (answer !== '-1') {
       await tel?.focus();
